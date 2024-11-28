@@ -118,6 +118,16 @@ add_executable(cxx_20_tests
 configure_tests(cxx_20_tests)
 target_compile_features(cxx_20_tests PRIVATE cxx_std_20)
 
+# Tests requiring C++23 support
+if ("cxx_std_23" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
+    add_executable(cxx_23_tests
+        cxx_23_tests.cpp
+        verbose_abort.cpp
+    )
+    configure_tests(cxx_23_tests)
+    target_compile_features(cxx_23_tests PRIVATE cxx_std_23)
+endif()
+
 # Windows-specific tests
 if (WIN32)
     add_executable(windows_tests
@@ -135,6 +145,9 @@ catch_discover_tests(cxx_98_tests EXTRA_ARGS --rng-seed ${RNG_SEED})
 catch_discover_tests(cxx_11_tests EXTRA_ARGS --rng-seed ${RNG_SEED})
 catch_discover_tests(cxx_17_tests EXTRA_ARGS --rng-seed ${RNG_SEED})
 catch_discover_tests(cxx_20_tests EXTRA_ARGS --rng-seed ${RNG_SEED})
+if ("cxx_std_23" IN_LIST CMAKE_CXX_COMPILE_FEATURES)
+    catch_discover_tests(cxx_23_tests EXTRA_ARGS --rng-seed ${RNG_SEED})
+endif()
 if (WIN32)
     catch_discover_tests(windows_tests EXTRA_ARGS --rng-seed ${RNG_SEED})
 endif()
