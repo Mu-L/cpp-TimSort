@@ -12,6 +12,9 @@
 #include <gfx/timsort.hpp>
 #include "test_helpers.hpp"
 
+
+#if defined(__cpp_lib_ranges_zip)
+
 TEST_CASE( "support for std::ranges::views::zip" )
 {
     SECTION( "zip two small collections" ) {
@@ -45,3 +48,5 @@ TEST_CASE( "support for std::ranges::views::zip" )
         CHECK( std::ranges::is_sorted(deq, std::ranges::greater{}) );
     }
 }
+
+#endif // defined(__cpp_lib_ranges_zip)
