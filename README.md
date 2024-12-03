@@ -1,5 +1,5 @@
-[![Latest Release](https://img.shields.io/badge/release-3.0.0-blue.svg)](https://github.com/timsort/cpp-TimSort/releases/tag/v3.0.0)
-[![Conan Package](https://img.shields.io/badge/conan-cpp--TimSort%2F3.0.0-blue.svg)](https://conan.io/center/recipes/timsort?version=3.0.0)
+[![Latest Release](https://img.shields.io/badge/release-3.0.1-blue.svg)](https://github.com/timsort/cpp-TimSort/releases/tag/v3.0.1)
+[![Conan Package](https://img.shields.io/badge/conan-cpp--TimSort%2F3.0.1-blue.svg)](https://conan.io/center/recipes/timsort?version=3.0.1)
 [![Pitchfork Layout](https://img.shields.io/badge/standard-PFL-orange.svg)](https://github.com/vector-of-bool/pitchfork)
 
 ## TimSort
@@ -120,7 +120,7 @@ Alternatively the library is also available [Conan Center][conan-center] and can
 [Conan][conan] cache with the following command:
 
 ```sh
-conan install --requires=timsort/3.0.0
+conan install --requires=timsort/3.0.1
 ```
 
 ## DIAGNOSTICS & INFORMATION
