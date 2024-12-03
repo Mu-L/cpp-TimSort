@@ -13,7 +13,7 @@ set(GFX_TIMSORT_SANITIZE "" CACHE STRING "Comma-separated list of options to pas
 FetchContent_Declare(
     Catch2
     GIT_REPOSITORY https://github.com/catchorg/Catch2
-    GIT_TAG v3.5.0
+    GIT_TAG fa43b77429ba76c462b1898d6cd2f2d7a9416b14  # v3.7.1
     SYSTEM
     FIND_PACKAGE_ARGS 3.1.0
 )
